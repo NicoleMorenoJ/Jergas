@@ -1,0 +1,67 @@
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #c4b3b39b;
+    }
+    
+    .banner {
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .banner .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Espacio entre la imagen y el texto */
+        position: relative; /* Necesario para posicionar la imagen */
+    }
+    
+    .banner .logo h1 {
+        margin: 0;
+        font-size: 1.5em;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
+    }
+    
+    .banner .logo p {
+        margin: 0;
+        font-size: 1.0em;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(198, 188, 250, 0.66);
+    }
+    
+    /* Esto es para la imagen de la boca*/
+    .banner .logo h1::before {
+        content: ""; /* Necesario para que se muestre el pseudo-elemento */
+        display: inline-block;
+        width: 50px; /* Ancho de la imagen */
+        height: 30px; /* Alto de la imagen */
+        background-image: url(img/boca.png); /* Ruta de la imagen */
+        background-size: cover;
+        background-position: center;
+        margin-right: 5px; /* Espacio entre la imagen y el texto */
+       
+    }
+    
+    .banner .menu {
+        text-align: right;
+    }
+    
+    .banner .menu a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.1em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .banner .menu a:hover {
+        text-decoration: underline;
+    }
