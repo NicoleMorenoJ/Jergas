@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Háblamelo</title>
+    <link rel="icon" type="img/jpg" href="img/icon.jpg">
+    <link rel="stylesheet" href="stile.css">
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <!-- Logo y eslogan a la izquierda -->
+            <div class="logo">
+                <a href="index.html">
+                    <h1>HÁBLAMELO</h1>
+                    <p>EL DICCIONARIO DEL PARCHE COLOMBIANO</p>
+            </div>
+
+            <!-- Menú a la derecha -->
+            <div class="menu">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="diccionario.html">Diccionario</a>
+                <a href="">Contacto</a>
+            </div>
+        </div>
+        <form action="search.html" method="get" style="margin-top: 10px;">
+            <input type="text" name="query" placeholder="Buscar palabras..." style="padding: 5px; width: 200px;">
+            <button type="submit" style="padding: 5px;">Buscar</button>
+        </form>
+    </header>
+    <main>
+        <!--Contenido principal de la pagina texto-->
+        <section>
+            <h2>Conoce Nuevas Palabras</h2>
+            <div><!--Imagen en general-->
+                <div><!--Para cada imagen-->
+                    <a href="palabra1.html">
+                        <img src="img/unoCarru.jpg" alt="Foto1" style="width: 500;height: auto;">
+                    </a>
+                    <a href="palabra2html">
+                        <img src="img/dosCarru.jpg" alt="Foto2" style="width: 300; height: auto;">
+                    </a>
+                    <a href="palabra3.html">
+                        <img src="img/tresCarru.jpg" alt="Foto3" style="width: 400; height: auto;">
+                    </a>
+                    <a href="palabra4.html">
+                        <img src="img/cuatCarru.png" alt="Foto4" style="width: 400; height: auto;">
+                    </a>
+                    <a href="palabra5.html">
+                        <img src="img/cincCarru.jpeg" alt="Foto5" style="width: 500; height: auto;">
+                    </a>
+                </div>
+            </div>
+            <button>❮</button>
+            <button>❯</button>
+        </section>
+        <p>Este diccionario permitira conocer las palabras mas coloquiales de Colombia</p>
+        <p> El diccionario A Lo Colombiano se crentra en la explicacion de palabras coloquiales
+            para aquellas personas que desean entender mejor Colombia.</p>
+        <section>
+            <h2>Palabras Destacadas</h2>
+            <div>
+                <!-- Tarjeta para una palabra destacada -->
+
+                <div>
+                    <div>
+                        <div>
+                            <h3>Chimba</h3>
+                            <p></p>
+                        </div>
+                        <div>
+                            <img src="img/chimba.jpeg" alt="Chimba" style="width: 400px; height: auto;">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tarjeta para la segunda palabra Destacado -->
+                <div>
+                    <div>
+                        <div>
+                            <h3>Mecato</h3>
+                            <p></p>
+                        </div>
+                        <div>
+                            <img src="img/mecato.jpg" alt="mecato" style="width: 400px; height: auto;">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+            <section>
+                <h2>Palabras Nuevas</h2>
+                <p>Haz clic en el botón para conocer palabras nuevas</p>
+                <div>
+                    <button onclick="window.location.href= 'Diccionario.html'">Ver mas</button>
+                </div>
+            </section>
+
+            <!-- Sección para Consumo de API -->
+            <section class="api">
+                <h2>Conocer de Colombia</h2>
+                <p>Haz clic en el botón para aorender sobre este maravilloso pais</p>
+                <div>
+                    <button onclick="window.location.href='Blocks.html'">Ver mas</button>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Hablando a Lo Colombiano. Todos los derechos reservados.</p>
+        <h2>Conoce mas</h2>
+        <a href="index.html">Inicio</a>
+        <a href="Diccionario.html">Palabras Nuevas</a>
+    </footer>
+</body>
+
+</html>

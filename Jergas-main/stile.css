@@ -1,0 +1,140 @@
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #c4b3b39b;
+    }
+    
+    .banner {
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .banner .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Espacio entre la imagen y el texto */
+        position: relative; /* Necesario para posicionar la imagen */
+    }
+    
+    .banner .logo h1 {
+        margin: 0;
+        font-size: 1.5em;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
+    }
+    
+    .banner .logo p {
+        margin: 0;
+        font-size: 1.0em;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(198, 188, 250, 0.66);
+    }
+    
+    /* Esto es para la imagen de la boca*/
+    .banner .logo h1::before {
+        content: ""; /* Necesario para que se muestre el pseudo-elemento */
+        display: inline-block;
+        width: 50px; /* Ancho de la imagen */
+        height: 30px; /* Alto de la imagen */
+        background-image: url(img/boca.png); /* Ruta de la imagen */
+        background-size: cover;
+        background-position: center;
+        margin-right: 5px; /* Espacio entre la imagen y el texto */
+       
+    }
+    
+    .banner .menu {
+        text-align: right;
+    }
+    
+    .banner .menu a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.1em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .banner .menu a:hover {
+        text-decoration: underline;
+    }
+    .card{
+        background: rgb(183, 209, 228);/*esto permite el cambio de color de la card*/
+        width: 300px;/*El tamaño que tendra*/
+        padding: 20px;/*Esto es para que no quede pegado a la margen*/
+        /*Aca agregare el codigo para generar un borde lindo a la card*/
+        border: 1px solid rgb(21, 26, 48);/*Esto es el borde de la card*/
+        border-radius: 10px;/*Esto es para que tenga un borde redondeado*/
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /*Esto permite la creacion de una sombra ligera */
+        text-align: center;/*El texto esta alineado en el centro*/
+        position: relative;/*Genera una posicion relativa*/
+    }
+    .card:hover{/*Integre esto para generar un efecto mas lindo a la tarjeta cuando se pase el mouse sobre ella*/
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);/*Crea una sombra que aparece cuando el mouse se pose sobre la tarjeta*/
+        transform: translateY(-5px);/*Para hacer el efecto de elevado se crea esto, ya que se desea que se eleve, se usa el eje Y*/
+        transition: all 0.5s ease;/*Si se desea generar un efecto satisfactorio y que no sea de golpe, se le agrega un cronometro*/
+        background: rgb(164, 198, 221);/*Deseaba que el color de la tarjeta se oscureciera un poco, asi que implemente esta linea*/
+    }
+    /*Aca se le da el estilo a la imagen*/
+    .profile-image{
+        width: 100px;/*Ancho imagen*/
+        height: 100px;/*Alto imagen*/
+        /*Aca se agregara el borde de la imagen color blanco*/
+        border: 3px solid white;/*Esto es el borde de la imagen*/
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);/*Esto es para el efecto de flote de la imagen*/
+        border-radius: 60px;/*La imagen sera circular gracias a esto*/
+        background-image: url('img/icon.png'); /*Esta seria la imagen principal */
+        background-size: cover; /*Aca la imagen ocupa todo el contenedor*/
+        background-position: center; /* Centra la imagen */
+        transition: all 0.5s ease; /* Transición suave */
+    }
+    /*Aca lo que hice fue que cuando pase el mouse sobre la tarjeta, la imagen cambie sin necesidad de estar sobre ella*/
+     .card:hover .profile-image{/*Esto es para que la imagen tenga un efecto de elevacion al pasar el mouse*/
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);/*Esto es para que la sombra se vea mas grande*/
+        transform: rotateY(-180deg);/*Esto es para que la imagen gire 180°*/
+        background-image:url('img/icon-2.png');/*Esto es para que la imagen cambie al pasar el mouse*/
+    }
+    .name{
+        font-size: 1.5rem;/*Agranda la fuente*/
+        margin: 5px 0;/*Espacio superior y espacio inferior*/
+        /*Aca se agregaran los efectos para hacer llamativo el nombre*/
+        font-family: "Winky Sans", sans-serif;/*Este sera el estilo que tenga solo el nombre*/
+        font-weight: 700;/*Esto es para que se vea mas en negrilla, se nota la diferencia mas que todo en la letra estilo curive*/
+        letter-spacing: 5px;/*Este es el espacio entre cada letra*/
+    }
+    .description{
+        font-size: 1rem;
+        color: rgb(113, 110, 106);
+        margin-top: 10px;
+    }
+    .example{
+        font-size: 1.3rem;
+        color: rgb(165, 144, 145);
+    }
+    .button-class{
+        display: block;/*Permite ocupar todo el espacio*/
+        width: 100%;/*Ancho del boton*/
+        padding: 10px;/*Alto del boton*/
+        background: rgb(136, 136, 146);/*Color del boton*/
+        color: white;/*Color del texto*/
+        border: none;/*Esto es para que no tenga borde*/
+        border-radius: 5px;
+        margin-top: 15px;
+        cursor: pointer;/*Este permite cambiar la flecha por una manita en referencia boton*/
+        font-size: 1.2rem;
+        /*En este espacio agrego el efecto que tendra el boton*/
+        transition: all 0.5s ease; /* Transición no sea tan agresiva*/
+    }
+    .button-class:hover{
+        /*Yo hice que el boton de ver mas direccione a una pagina diferente*/
+        background: rgb(8, 8, 205);
+        transform: scale(1.05);/*Esto es para que el boton se haga mas grande al pasar el boton*/
+        text-decoration: underline;/*Esto es para que el texto se subraye al pasar el mouse*/
+    }
