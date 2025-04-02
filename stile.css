@@ -1,171 +1,342 @@
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Rye', cursive; /* Aplica la fuente Rye a todo el documento */
+    font-family: 'Times New Roman', Times, serif;
     background-color: #c4b3b39b;
 }
-    p {
-        margin: 0;
-        padding: 0;
-        font-size: 1.4em; /* Tamaño de fuente para los párrafos */
-        color: #333; /* Color de texto para los párrafos */  
-        line-height: 1.5; /* Espaciado entre líneas */
-        font-family: 'Times New Roman', Times, serif;
-    }
-    
-    .banner {
-        position: relative; /* Necesario para posicionar el pseudo-elemento */
-        background-image: url('img/banderaColombia.jpeg');
-        background-size: cover;  /* Asegura que la imagen cubra todo el banner */
 
-        background-repeat: no-repeat;
-        background-position: center; 
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        height: 200px; /* Ajusta la altura del banner según sea necesario */
-        overflow: hidden; /* Asegura que el pseudo-elemento no se salga del banner */
-    }
+.banner {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 50px;
+    background-image: url('img/unoCarru.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Asegura que esté detrás del contenido */
+}
+
+
+.banner .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre la imagen y el texto */
+    position: relative;
+    /* Necesario para posicionar la imagen */
+}
+
+.banner .logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
+}
+
+.banner .logo p {
+    margin: 0;
+    font-size: 1.0em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(198, 188, 250, 0.66);
+}
+
+/* Esto es para la imagen de la boca*/
+.banner .logo h1::before {
+    content: "";
+    /* Necesario para que se muestre el pseudo-elemento */
+    display: inline-block;
+    width: 50px;
+    /* Ancho de la imagen */
+    height: 30px;
+    /* Alto de la imagen */
+    background-image: url(img/boca.png);
+    /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+
+}
+
+.banner .menu {
+    text-align: right;
+}
+
+.banner .menu a {
+    color: rgb(246, 241, 241);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.79);
+}
+
+.banner .menu a:hover {
+    text-decoration: underline;
+}
+
+/*Estilos para el apartado del index carrucel*/
+.carrucel {
+    background-color: #f9fac8;
+    width: 800px; /* Ajusta el tamaño del carrusel */
+    height: 400px; /* Ajusta la altura */
+    margin: 50px auto;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor de las imágenes */
+.carrucel ul {
+    display: flex;
+    width: 100%; /* Ajusta el ancho según la cantidad de imágenes */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    animation: slide 20s linear infinite; /* Velocidad y fluidez */
+}
+
+/* Elementos individuales */
+.carrucel li {
+    list-style: none;
+    flex: 0 0 100%;/* Cada imagen ocupa el 100% del ancho del carrusel */
+    height: 100%; /* Para que mantengan la proporción */
+}
+
+/* Imágenes dentro del carrusel */
+.carrucel img {
+    width: 100%;
+    height: 100%; /* Para que mantengan la proporción */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Animación */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    25% { transform: translateX(0%); }
+
+    30% { transform: translateX(-100%); }
+    40% { transform: translateX(-100%); }
+
+    50% { transform: translateX(-200%); }
+    60% { transform: translateX(-200%); }
+
+    70% { transform: translateX(-300%); }
+    80% { transform: translateX(-300%); }
+
+    90% { transform: translateX(-400%); }
+    100% { transform: translateX(-400%); } 
     
-    .banner::before {
-        content: ""; /* Necesario para mostrar el pseudo-elemento */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.5); /* Capa blanca con opacidad */
-        z-index: 1; /* Coloca la capa debajo del contenido del banner */
-    }
-    
-    .banner * {
-        position: relative; /* Asegura que el contenido del banner esté por encima de la capa blanca */
-        z-index: 2;
-    }
-    
-    .banner .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px; /* Espacio entre la imagen y el texto */
-        position: relative; /* Necesario para posicionar la imagen */
-    }
-    
-    .banner .logo h1 {
-        margin: 0;
-        font-size: 1.5em;
-        color: black;
-        text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
-    }
-    
-    .banner .logo p {
-        margin: 0;
-        font-size: 1.0em;
-        color: black;
-        text-shadow: 2px 2px 4px rgba(198, 188, 250, 0.66);
-    }
-    
-    /* Esto es para la imagen de la boca*/
-    .banner .logo h1::before {
-        content: ""; /* Necesario para que se muestre el pseudo-elemento */
-        display: inline-block;
-        width: 50px; /* Ancho de la imagen */
-        height: 30px; /* Alto de la imagen */
-        background-image: url(img/boca.png); /* Ruta de la imagen */
-        background-size: cover;
-        background-position: center;
-        margin-right: 5px; /* Espacio entre la imagen y el texto */
-       
-    }
-    
-    .banner .menu {
-        text-align: right;
-    }
-    
-    .banner .menu a {
-        color: black;
-        text-decoration: none;
-        margin: 0 10px;
-        font-size: 1.1em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .banner .menu a:hover {
-        text-decoration: underline;
-    }
-    .card{
-        background: rgb(183, 209, 228);/*esto permite el cambio de color de la card*/
-        width: 300px;/*El tamaño que tendra*/
-        padding: 20px;/*Esto es para que no quede pegado a la margen*/
-        /*Aca agregare el codigo para generar un borde lindo a la card*/
-        border: 1px solid rgb(21, 26, 48);/*Esto es el borde de la card*/
-        border-radius: 10px;/*Esto es para que tenga un borde redondeado*/
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /*Esto permite la creacion de una sombra ligera */
-        text-align: center;/*El texto esta alineado en el centro*/
-        position: relative;/*Genera una posicion relativa*/
-    }
-    .card:hover{/*Integre esto para generar un efecto mas lindo a la tarjeta cuando se pase el mouse sobre ella*/
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);/*Crea una sombra que aparece cuando el mouse se pose sobre la tarjeta*/
-        transform: translateY(-5px);/*Para hacer el efecto de elevado se crea esto, ya que se desea que se eleve, se usa el eje Y*/
-        transition: all 0.5s ease;/*Si se desea generar un efecto satisfactorio y que no sea de golpe, se le agrega un cronometro*/
-        background: rgb(164, 198, 221);/*Deseaba que el color de la tarjeta se oscureciera un poco, asi que implemente esta linea*/
-    }
-    /*Aca se le da el estilo a la imagen*/
-    .profile-image{
-        width: 100px;/*Ancho imagen*/
-        height: 100px;/*Alto imagen*/
-        /*Aca se agregara el borde de la imagen color blanco*/
-        border: 3px solid white;/*Esto es el borde de la imagen*/
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);/*Esto es para el efecto de flote de la imagen*/
-        border-radius: 60px;/*La imagen sera circular gracias a esto*/
-        background-image: url('img/icon.png'); /*Esta seria la imagen principal */
-        background-size: cover; /*Aca la imagen ocupa todo el contenedor*/
-        background-position: center; /* Centra la imagen */
-        transition: all 0.5s ease; /* Transición suave */
-    }
-    /*Aca lo que hice fue que cuando pase el mouse sobre la tarjeta, la imagen cambie sin necesidad de estar sobre ella*/
-     .card:hover .profile-image{/*Esto es para que la imagen tenga un efecto de elevacion al pasar el mouse*/
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);/*Esto es para que la sombra se vea mas grande*/
-        transform: rotateY(-180deg);/*Esto es para que la imagen gire 180°*/
-        background-image:url('img/icon-2.png');/*Esto es para que la imagen cambie al pasar el mouse*/
-    }
-    .name{
-        font-size: 1.5rem;/*Agranda la fuente*/
-        margin: 5px 0;/*Espacio superior y espacio inferior*/
-        /*Aca se agregaran los efectos para hacer llamativo el nombre*/
-        font-family: "Winky Sans", sans-serif;/*Este sera el estilo que tenga solo el nombre*/
-        font-weight: 700;/*Esto es para que se vea mas en negrilla, se nota la diferencia mas que todo en la letra estilo curive*/
-        letter-spacing: 5px;/*Este es el espacio entre cada letra*/
-    }
-    .description{
-        font-size: 1rem;
-        color: rgb(113, 110, 106);
-        margin-top: 10px;
-    }
-    .example{
-        font-size: 1.3rem;
-        color: rgb(165, 144, 145);
-    }
-    .button-class{
-        display: block;/*Permite ocupar todo el espacio*/
-        width: 100%;/*Ancho del boton*/
-        padding: 10px;/*Alto del boton*/
-        background: rgb(136, 136, 146);/*Color del boton*/
-        color: white;/*Color del texto*/
-        border: none;/*Esto es para que no tenga borde*/
-        border-radius: 5px;
-        margin-top: 15px;
-        cursor: pointer;/*Este permite cambiar la flecha por una manita en referencia boton*/
-        font-size: 1.2rem;
-        /*En este espacio agrego el efecto que tendra el boton*/
-        transition: all 0.5s ease; /* Transición no sea tan agresiva*/
-    }
-    .button-class:hover{
-        /*Yo hice que el boton de ver mas direccione a una pagina diferente*/
-        background: rgb(8, 8, 205);
-        transform: scale(1.05);/*Esto es para que el boton se haga mas grande al pasar el boton*/
-        text-decoration: underline;/*Esto es para que el texto se subraye al pasar el mouse*/
-    }
+}
+
+/*Estilos para el apartado del diccionario*/
+.banner2 {
+    border-bottom: solid 1px black;
+    margin: 0 50px;
+    /*Espacio entre el banner y el texto*/
+    padding: 20px;
+    /*Espacio entre el banner y el texto*/
+}
+
+.titulo {
+    text-align: center;
+    /*Esto es para que el texto se alinee al centro*/
+    font-size: normal;
+    /*Tamaño del texto*/
+    font-weight: 200;
+    /*Esto es para que el texto no sea tan grueso*/
+    color: black;
+    /*Color del texto*/
+    margin-top: 10px;
+    /*Espacio entre el banner y el texto*/
+    font-family: 'Rye', cursive;
+    /*Tipo de letra*/
+    letter-spacing: 5px;
+    /*Espacio entre las letras*/
+}
+
+.subtitulo {
+    text-align: center;
+    /*Esto es para que el texto se alinee al centro*/
+    font-size: normal;
+    /*Tamaño del texto*/
+    font-weight: 200;
+    /*Esto es para que el texto no sea tan grueso*/
+    color: black;
+    /*Color del texto*/
+    margin-top: 20px;
+    /*Espacio entre el banner y el texto*/
+    font-family: 'Times New Roman', Times, serif;
+    /*Tipo de letra*/
+    letter-spacing: 2px;
+    /*Espacio entre las letras*/
+}
+
+/*Esto sera el estilo que tendran las tarjetas especificas para el apartado de diccionario*/
+.container {
+    display: flex;
+    /*Esto es para que las tarjetas se alineen una al lado de la otra*/
+    justify-content: center;
+    /*Esto es para que se alineen al centro*/
+    min-height: 100vh;
+    /*Esto es para que la tarjeta ocupe todo el alto de la pantalla*/
+    gap: 40px;
+    /*Esto es para el espacio entre cada tarjeta*/
+    flex-wrap: wrap;
+    /*Esto es para que las tarjetas se alineen una al lado de la otra*/
+}
+
+.card {
+    position: relative;
+    /*Esto es para que la tarjeta tenga un efecto de elevacion*/
+    width: 300px;
+    /*Ancho de la tarjeta*/
+    height: 400px;
+    /*Alto de la tarjeta*/
+    margin: 20px;
+    /*Espacio entre la tarjeta y el banner*/
+}
+
+.card .face {
+    position: absolute;
+    /*Esto es para que la tarjeta tenga un efecto de elevacion*/
+    width: 100%;
+    /*Ancho de la tarjeta*/
+    height: 100%;
+    /*Alto de la tarjeta*/
+    backface-visibility: hidden;
+    /*Esto es para que la parte de atras de la tarjeta no se vea*/
+    border-radius: 10px;
+    /*Esto es para que las esquinas de la tarjeta sean redondeadas*/
+    overflow: hidden;
+    /*Esto es para que no se vea lo que sale de la tarjeta*/
+    transition: all 0.5s ease;
+    /*Esto es para que el efecto no sea tan brusco*/
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    /*Esto es para que la tarjeta tenga un efecto de elevacion*/
+    box-shadow: 0px 5px 10px #000000;
+    /*Esto es para que la tarjeta tenga una sombra*/
+}
+
+.card .front img {
+    position: absolute;
+    /*Esto es para que la imagen se ajuste a la tarjeta*/
+    width: 100%;
+    /*Ancho de la tarjeta*/
+    height: 100%;
+    /*Alto de la tarjeta*/
+    object-fit: cover;
+    /*Esto es para que la imagen se ajuste a la tarjeta*/
+    filter: opacity(0.5);
+    /*Esto es para que la imagen se vea un poco borrosa*/
+}
+
+.card .front .name {
+    position: absolute;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    top: 50%;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    left: 50%;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    transform: translate(-50%, -50%);
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    color: rgb(7, 7, 7);
+    /*Color del texto*/
+    font-size: 2em;
+    /*Tamaño del texto*/
+    text-align: center;
+    /*Alineacion del texto*/
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    /*Esto es para que la tarjeta tenga un efecto de elevacion*/
+    background-color: #f9fac8;
+    /*Color de fondo de la tarjeta*/
+    padding: 15px;
+    /*Espacio entre el texto y la tarjeta*/
+    color: black;
+    /*Color del texto*/
+    display: flex;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    flex-direction: column;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    justify-content: space-between;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    text-align: center;
+    /*Esto es para que el texto se ajuste a la tarjeta*/
+    box-shadow: 0px 5px 10px #000000;
+    /*Esto es para que la tarjeta tenga una sombra*/
+}
+
+.card .back .description {
+    font-size: 20px;
+    /*Tamaño del texto*/
+    margin: 20;
+    /*Espacio entre el texto y la tarjeta*/
+    letter-spacing: 2px;
+    /*Espacio entre las letras*/
+}
+
+.card .back .example {
+    font-size: 1.2em;
+    /*Tamaño del texto*/
+    margin: 0;
+    /*Espacio entre el texto y la tarjeta*/
+    letter-spacing: 1px;
+    /*Espacio entre las letras*/
+}
+
+.card .back .button-class {
+    display: block;
+    /*Permite ocupar todo el espacio*/
+    width: 100%;
+    /*Ancho del boton*/
+    padding: 5px;
+    /*Alto del boton*/
+    background: rgb(136, 136, 146);
+    /*Color del boton*/
+    color: white;
+    /*Color del texto*/
+    border: none;
+    /*Esto es para que no tenga borde*/
+    border-radius: 5px;
+    margin-top: 5px;
+    /*Espacio entre el texto y el boton*/
+    cursor: pointer;
+    /*Este permite cambiar la flecha por una manita en referencia boton*/
+    font-size: 1.2rem;
+    /*Esto es para el tamaño del texto*/
+    /*En este espacio agrego el efecto que tendra el boton*/
+    transition: all 0.5s ease;
+    /* Transición no sea tan agresiva*/
+}
+
+.card .back .button-class:hover {
+    /*Yo hice que el boton de ver mas direccione a una pagina diferente*/
+    background: rgb(8, 8, 205);
+    transform: scale(1.05);
+    /*Esto es para que el boton se haga mas grande al pasar el boton*/
+    text-decoration: underline;
+    /*Esto es para que el texto se subraye al pasar el mouse*/
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+    /*Esto es para que la tarjeta tenga un efecto de elevacion*/
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+    /*Esto es para que la tarjeta tenga un efecto de elevacion*/
+}
