@@ -1,85 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rye&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
     background-color: #c4b3b39b;
+    font-weight: 999; /* Hace el texto más grueso */
+    text-shadow: #000000 0px 0px 1px; /* Agrega un poco de sombra al texto */
+    color: #333; /* Color de texto por defecto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    font-size: 1.4em; /* Tamaño de fuente por defecto */
+    letter-spacing: 1px; /* Espaciado entre letras */
+   
+    
+}
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color de texto para los enlaces */
+    font-family: 'Times New Roman', Times, serif;
 }
 
+
 .banner {
-    background-size: cover;
-    background-position: center;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    background-image: url('img/banderaColombia.jpeg');
+    background-size: cover;  /* Asegura que la imagen cubra todo el banner */
+
+    background-repeat: no-repeat;
+    background-position: center; 
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 50px;
-    background-image: url('img/unoCarru.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0; /* Asegura que esté detrás del contenido */
+    box-shadow: 0 4px 8px  rgb(126, 174, 199); /* Sombra para el banner */  
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px ; /* Espacio entre el banner y el resto del contenido */
+    height: 200px; /* Ajusta la altura del banner según sea necesario */
+    overflow: hidden; /* Asegura que el pseudo-elemento no se salga del banner */
 }
 
+.banner::before {
+    content: ""; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1)  ; /* Capa blanca con opacidad */
+    z-index: 1; /* Coloca la capa debajo del contenido del banner */
+}
+
+.banner * {
+    position: relative; /* Asegura que el contenido del banner esté por encima de la capa blanca */
+    z-index: 2;
+}
 
 .banner .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* Espacio entre la imagen y el texto */
-    position: relative;
-    /* Necesario para posicionar la imagen */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+    position: relative; /* Necesario para posicionar la imagen */
 }
 
+/* Estilo para el título "HÁBLAMELO" */
 .banner .logo h1 {
-    margin: 0;
-    font-size: 1.5em;
-    color: black;
-    text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
+    font-size: 2.5em; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace la letra más gruesa */
+    color: black; /* Asegura que el color sea visible */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Agrega un poco de sombra para resaltar */
 }
 
 .banner .logo p {
-    margin: 0;
-    font-size: 1.0em;
-    color: black;
-    text-shadow: 2px 2px 4px rgba(198, 188, 250, 0.66);
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace la letra más gruesa */
+    color: black; /* Asegura que el color sea visible */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agrega un poco de sombra para resaltar */
 }
 
 /* Esto es para la imagen de la boca*/
 .banner .logo h1::before {
-    content: "";
-    /* Necesario para que se muestre el pseudo-elemento */
+    content: ""; /* Necesario para que se muestre el pseudo-elemento */
     display: inline-block;
-    width: 50px;
-    /* Ancho de la imagen */
-    height: 30px;
-    /* Alto de la imagen */
-    background-image: url(img/boca.png);
-    /* Ruta de la imagen */
+    width: 50px; /* Ancho de la imagen */
+    height: 30px; /* Alto de la imagen */
+    background-image: url(img/boca.png); /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
-    margin-right: 5px;
-    /* Espacio entre la imagen y el texto */
-
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+   
 }
 
 .banner .menu {
     text-align: right;
 }
 
+/* Estilo para los enlaces del menú ("Nosotros", "Diccionario", "Contacto") */
 .banner .menu a {
-    color: rgb(246, 241, 241);
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.1em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.79);
+    font-size: 1.3em; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace la letra más gruesa */
+    color: rgb(255, 255, 255); /* Asegura que el color sea visible */
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Agrega un poco de sombra para resaltar */
+    text-decoration: none; /* Elimina el subrayado */
+    margin: 0 15px; /* Aumenta el espacio entre los enlaces */
 }
 
 .banner .menu a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+    color: #007BFF; /* Cambia el color al pasar el mouse (opcional) */
 }
 
 /*Estilos para el apartado del index carrucel*/
@@ -150,13 +178,13 @@ body {
     /*Esto es para que el texto se alinee al centro*/
     font-size: normal;
     /*Tamaño del texto*/
-    font-weight: 200;
+    font-weight: bold;
     /*Esto es para que el texto no sea tan grueso*/
     color: black;
     /*Color del texto*/
     margin-top: 10px;
     /*Espacio entre el banner y el texto*/
-    font-family: 'Rye', cursive;
+    font-family:    'Times New Roman', Times, serif;
     /*Tipo de letra*/
     letter-spacing: 5px;
     /*Espacio entre las letras*/
@@ -167,7 +195,7 @@ body {
     /*Esto es para que el texto se alinee al centro*/
     font-size: normal;
     /*Tamaño del texto*/
-    font-weight: 200;
+    font-weight: bold;
     /*Esto es para que el texto no sea tan grueso*/
     color: black;
     /*Color del texto*/
@@ -340,3 +368,6 @@ body {
     transform: perspective(600px) rotateY(360deg);
     /*Esto es para que la tarjeta tenga un efecto de elevacion*/
 }
+
+
+
