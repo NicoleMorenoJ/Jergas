@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+
+/*Estilos generales*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #c4b3b39b;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.banner {
+    background-size: cover;
+    background-position: center;
+    padding: min(20px, 5%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 50px;
+    background-image: url('img/banderaColombia.jpeg');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    /* Asegura que esté detrás del contenido */
+}
+
+
+.banner .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio entre la imagen y el texto */
+    position: relative;
+    /* Necesario para posicionar la imagen */
+}
+
+.banner .logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
+}
+
+.banner .logo p {
+    margin: 0;
+    font-size: 1.0em;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(198, 188, 250, 0.66);
+}
+
+/* Esto es para la imagen de la boca*/
+.banner .logo h1::before {
+    content: "";
+    /* Necesario para que se muestre el pseudo-elemento */
+    display: inline-block;
+    width: 50px;
+    /* Ancho de la imagen */
+    height: 30px;
+    /* Alto de la imagen */
+    background-image: url(img/boca.png);
+    /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+
+}
+
+.banner .menu {
+    text-align: right;
+}
+
+.banner .menu a {
+    color: rgb(246, 241, 241);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.79);
+}
+
+.banner .menu a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.0em;
+    margin: 20px 0;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(245, 249, 185, 0.683);
+}
+
+/*Estilo para el buscador*/
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 50px;
+    width: 50% 0;
+    /* Ajusta el ancho del formulario */
+}
+
+/* Estilo para el input de búsqueda */
+input[type="text"] {
+    width: 70%;
+
+    border: 2px solid #f1ebaf;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    outline: none;
+    /* Eliminar el borde azul al hacer clic */
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+
+    color: white;
+    background-color: #003366;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #FFC107;
+    color: #003366;
+}
+
+input[type="text"]:focus {
+    border-color: #003366;
+    background-color: white;
+}

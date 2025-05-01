@@ -1,0 +1,31 @@
+.objetivos {
+    flex-direction: column;
+    text-align: center;
+}
+
+.objetivos-card {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #eabdbd;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 15vw;
+    height: auto;
+    margin-bottom: 1rem;
+}
