@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.sugerencias {
+    background-color: #fceabb;
+    padding: 5rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sugerencias-contenido {
+    text-align: center;
+    max-width: 700px;
+}
+
+.sugerencias-contenido h2 {
+    font-size: 2.5rem;
+    color: #5c4400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.sugerencias-contenido p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.btn-sugerencia {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-sugerencia:hover {
+    background-color: #e68900;
+}
+
+#form-sugerencia {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form-sugerencia label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+#form-sugerencia input[type="text"],
+#form-sugerencia textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+#form-sugerencia input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-sugerencia input[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+.form-visible {
+    display: block;
+}
+
+button[type="submit"] {
+
+    color: white;
+    background-color: #680404;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366;
+    color: #ffffff;
+}

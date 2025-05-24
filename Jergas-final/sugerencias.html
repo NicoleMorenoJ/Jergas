@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Háblamelo</title>
+    <link rel="icon" type="img/jpg" href="img/icon.jpg">
+    <link rel="stylesheet" href="/css/!main.css">
+
+    <link rel="stylesheet" href="sugerencias.css">
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <!-- Logo y eslogan a la izquierda -->
+            <div class="logo">
+                <a href="index.html">
+                    <h1>HÁBLAMELO</h1>
+                    <p>EL DICCIONARIO DEL PARCHE COLOMBIANO</p>
+                </a>
+            </div>
+            <!-- Menú a la derecha -->
+            <div class="menu">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="diccionario.html">Diccionario</a>
+                <a href="sugerencias.html">Sugerencias</a>
+            </div>
+        </div>
+        <form action="stile.css" method="get" style="margin-top: 10px;">
+            <input type="text" name="query" placeholder="Buscar palabras..." style="padding: 5px; width: 200px;">
+            <button type="submit" style="padding: 5px;">Buscar</button>
+        </form>
+    </header>
+    <section class="sugerencias">
+        <div class="sugerencias-contenido">
+            <h2>¿Tienes una jerga colombiana para compartir?</h2>
+            <p>Ayúdanos a enriquecer nuestro diccionario con tus aportes.</p>
+            <a href="#" class="btn-sugerencia" onclick="mostrarFormulario()">Deja tu sugerencia</a>
+        </div>
+
+        <form id="form-sugerencia">
+            <label for="nombre">Tu nombre (opcional):</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="jerga">Jerga colombiana:</label>
+            <textarea id="jerga" name="jerga" required></textarea>
+
+            <label for="significado">Significado / contexto:</label>
+            <textarea id="significado" name="significado" required></textarea>
+
+            <input type="submit" value="Enviar sugerencia">
+        </form>
+    </section>
+</body>
+</html>
